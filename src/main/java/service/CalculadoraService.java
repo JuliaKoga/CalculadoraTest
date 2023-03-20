@@ -38,4 +38,20 @@ public class CalculadoraService {
             return calcularAreaQuadrado(quadrado);
         }
     }
+
+    public Triangulo trianguloDeMenorArea(Triangulo trianguloA, Triangulo trianguloB){
+        if (calcularAreaTriangulo(trianguloA)>calcularAreaTriangulo(trianguloB)) {
+            return trianguloB;
+        } else if (calcularAreaTriangulo(trianguloA)<calcularAreaTriangulo(trianguloB)) {
+            return trianguloA;
+        }else {return null;}
+    }
+
+    public Quadrado quadradoDeMenorArea(Quadrado quadradoA, Quadrado quadradoB){
+        if (calcularAreaQuadrado(quadradoA)>calcularAreaQuadrado(quadradoB)) {
+            return quadradoB;
+        } else if (calcularAreaQuadrado(quadradoA)<calcularAreaQuadrado(quadradoB)) {
+            return quadradoA;
+        }else {return null;}
+    }
 }
